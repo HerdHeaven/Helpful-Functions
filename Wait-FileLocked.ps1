@@ -7,7 +7,7 @@ function Wait-FileLocked {
         try{
             $filestream = [System.IO.File]::Open($filePath,'Open','Write')
 
-            #close the filehandle
+            #close the file
             $filestream.Close()
             #cleanup a little :)
             $filestream.Dispose()
